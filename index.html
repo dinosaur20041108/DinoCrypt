@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>加密恐龙| 一个免费离线的加密软件.</title>
+  <title>DinoCrypt| 轻量级离线极速的加密软件</title>
   <meta name="Description" content="在您本地电脑的浏览器里面就可以进行加密解密，无需安装任何软件，采用 AES 256 算法.">
   <meta name="Keywords"
     content="文件加密神器|免费加密软件|开源加密软件mac|开源免费加密软件windows|开源免费加密软件linux">
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
 
   <ul class="nav justify-content-end">
      <li class="nav-item">
@@ -28,19 +29,25 @@
     
   </ul>
 
-  <div class="container h-100">
+  <!-- 创建一个全屏高的容器 -->
+<div class="container h-100">
+    <!-- 创建一个全屏高的行，并居中对齐其中的内容 -->
     <div class="row h-100 justify-content-center align-items-center">
 
+      <!-- 定义一个响应式的列，根据屏幕大小自动调整宽度 -->
       <div class="col sm-12 col-md-8 col-lg-6">
-        <h2 class="display-4 title"><a href="index.html">加密恐龙 <img src="assets/logo.png" width="75"></a></h2>
+        <img src="assets/logo.png" width="80">
+        <h2 class="display-4 title"><a href="index.html">DinoCrypt </a></h2>
         <p class="lead">
-          一个免费离线的加密软件.
+           轻量级|离线极速加密软件
         </p>
 
+        <!-- 文件上传组件 -->
         <div class="custom-file">
           <input type="file" class="custom-file-input" id="customFile">
           <label class="custom-file-label" for="customFile">
-            <div id="file-placeholder">第1步：把文件拖到这里或者点击右边的Browse按钮</div>
+            <!-- 默认显示的文件选择提示 -->
+            <div id="file-placeholder">拖拽或浏览文件</div>
           </label>
         </div>
 
@@ -50,15 +57,15 @@
         <div class="form-group">
           <div class="input-group mb-3">
             <label for="inputPassword"></label>
-            <input type="text" id="inputPassword" placeholder="第2步：请输入一个密码或者自动生成随机密码 (推荐)"
+            <input type="text" id="inputPassword" placeholder="请输入密码或者自动生成高强度密码 (推荐)"
               class="form-control mx-sm-6" aria-describedby="passwordHelpInline">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="generateButton" data-toggle="tooltip"
+              <button class="btn btn-outline-success" type="button" id="generateButton" data-toggle="tooltip"
                 data-placement="right" title="自动生成随机密码"><i class="fas fa-sync-alt"></i></button>
             </div>
           </div>
 
-          <small id="passwordHelpInline" class="text-muted">
+          <small id="passwordHelpInline" class="text-body">
             <b>密码强度</b>: <span id="strength-text"></span>
           </small>
           <div class="progress progress-sm">
@@ -67,8 +74,8 @@
           </div>
         </div>
 
-        <button type="button" class="btn btn-outline-dark" id="encryptBtn">开始加密</button>
-        <button type="button" class="btn btn-outline-dark" id="decryptBtn">开始解密</button>
+        <button type="button" class="btn btn-outline-primary" id="encryptBtn">开始加密</button>
+        <button type="button" class="btn btn-outline-info" id="decryptBtn">开始解密</button>
         <button type="button" class="btn btn-outline-danger" id="resetBtn" style="display: none"><i
             class="fas fa-redo"></i> 重新设置</button>
         <br>
